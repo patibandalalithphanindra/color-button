@@ -1,6 +1,11 @@
 import './App.css';
 import { useState } from 'react';
 
+export function replaceCamelWithCases(colorName) {
+  return colorName.replace(/\B([A-Z])\B/g, ' $1');
+}
+
+
 function App() {
   const [buttonColor, setButtonColor] = useState('red');
   const [disabled, setDisabled] = useState(false);
